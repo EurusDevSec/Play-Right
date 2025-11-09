@@ -9,4 +9,4 @@ Group: 16
 > [!IMPORTANT]
 > 3 - Nguyen Ngoc Hoa
 
-This is test Background ![myBackground](https://i.pinimg.com/736x/b9/6b/67/b96b678ca060a545fe78108db68da9cf.jpg)
+This is test Background ![myBackground](https://i.pinimg.com/originals/b3/d8/d1/b3d8d1501e8bf377b1ddefaca01c1b75.gif)
