@@ -1,0 +1,6 @@
+testGif.gif 
+*.gif 
+
+# !assets/*.gif
+# !assets/**/*.gif
+
