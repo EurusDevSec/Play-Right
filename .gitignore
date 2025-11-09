@@ -5,4 +5,5 @@
 # !assets/**/*.gif
 
 docs/guided.md
+docs/architecture.md
 !docs/test_pattern_negation.md 
