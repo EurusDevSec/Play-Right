@@ -1,0 +1,10 @@
+scrapy>=2.8
+scrapy-playwright
+playwright
+pandas
+spacy
+spacy-langdetect   
+plotly
+fastapi[all]     # use for api
+uvicorn
+python-dotenv
