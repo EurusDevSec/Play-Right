@@ -5,5 +5,5 @@ class JobItem(scrapy.Item):
     company=scrapy.Field()
     location=scrapy.Field()
     salary=scrapy.Field()
-    description=Field()
+    description=scrapy.Field()
     scraped_at=scrapy.Field()
