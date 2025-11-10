@@ -9,5 +9,13 @@ Group: 16
 > [!IMPORTANT]
 > 3 - Nguyen Ngoc Hoa
 
+- Workflow - use uv
+
+1. uv venv: create venv
+2. create **requirements.in** , add list needed package: pandas, playwright, spa-cy, fastapi, plotly
+3. compile: **uv pip compile requirements.in -o requirements.txt**
+4. sync: **uv pip sync requirement.txt**
+5. run: **uv run python main.py**
+
 This is test Background
 ![myBackground](assets/imgs/testGif.gif)

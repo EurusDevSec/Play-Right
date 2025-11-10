@@ -1,0 +1,10 @@
+scrapy
+scrapy-playwright
+playwright
+pandas
+spacy
+spacy-langdetect
+plotly
+fastapi[all]
+uvicorn
+python-dotenv
