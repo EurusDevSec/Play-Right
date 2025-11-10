@@ -11,3 +11,16 @@ docs/python_simple_architecture.md
 
 #moi truong ao
 .venv
+
+# Data khong commit raw len 
+miniArchitecture/data/raw/*
+miniArchitecture/data/processed/*
+
+#python
+__pycache__/
+*.pyc 
+
+#OS /IDE
+.vscode
+.DS_Store
+
