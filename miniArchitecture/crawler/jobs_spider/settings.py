@@ -10,3 +10,7 @@ DOWNLOAD_HANDLERS = {
 ROBOTSTXT_OBEY = True
 DOWNLOAD_DELAY = 1  # điều chỉnh theo target
 CONCURRENT_REQUESTS = 8
+
+ITEM_PIPELINES = {
+   'jobs_spider.pipelines.SQLitePipeline': 300,
+}
