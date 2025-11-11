@@ -3,7 +3,7 @@ import os
 
 class SQLitePipeline:
     def open_spider(self, spider):
-        # Đảm bảo thư mục data tồn tại ở thư mục gốc của project
+       
         db_path = os.path.join('data', 'jobs.db')
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
         
