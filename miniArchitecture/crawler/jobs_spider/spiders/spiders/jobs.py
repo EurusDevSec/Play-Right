@@ -17,4 +17,6 @@ class JobSpider(scrapy.Spider):
             item['description'] = item['title']
             item['scraped_at'] = datetime.datetime.utcnow().isoformat()
             yield item
-        next_page = 
+            next_page = response.css('li.next a::attr(href)').get()
+            if next_page is not None:
+                yield response.follow(next_page, self.parse)
