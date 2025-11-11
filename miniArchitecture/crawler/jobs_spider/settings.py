@@ -8,7 +8,7 @@ DOWNLOAD_HANDLERS = {
     'https': 'scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler',
 }
 ROBOTSTXT_OBEY = True
-DOWNLOAD_DELAY = 1  # điều chỉnh theo target
+DOWNLOAD_DELAY = 1  # adjust according to target
 CONCURRENT_REQUESTS = 8
 
 ITEM_PIPELINES = {
