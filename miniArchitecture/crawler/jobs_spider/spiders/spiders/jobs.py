@@ -24,8 +24,8 @@ class TopCVSpider(scrapy.Spider):
             "Chrome/129.0.0.0 Safari/537.36"
         ),
         "Accept": (
-            "text/html,application/xhtml+xml,application/xml;q=0.9,"\
-            "image/avif,image/webp,image/apng,*/*;q=0.8,"\
+            "text/html,application/xhtml+xml,application/xml;q=0.9,"
+            "image/avif,image/webp,image/apng,*/*;q=0.8,"
             "application/signed-exchange;v=b3;q=0.7"
         ),
         "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",

@@ -26,6 +26,7 @@ class SQLitePipeline:
             )
             '''
         )
+        self._ensure_columns()
 
     def close_spider(self, spider):
         self.conn.close()
@@ -69,3 +70,16 @@ class SQLitePipeline:
         )
         self.conn.commit()
         return item
+
+    def _ensure_columns(self) -> None:
+        result = self.cur.execute("PRAGMA table_info(jobs)").fetchall()
+        existing = {row[1] for row in result}
+        migrations = {
+            "experience": "ALTER TABLE jobs ADD COLUMN experience TEXT",
+            "tags": "ALTER TABLE jobs ADD COLUMN tags TEXT",
+            "skills": "ALTER TABLE jobs ADD COLUMN skills TEXT",
+        }
+        for column, statement in migrations.items():
+            if column not in existing:
+                self.cur.execute(statement)
+        self.conn.commit()
