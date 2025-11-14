@@ -31,7 +31,7 @@ class TopCVSpider(scrapy.Spider):
         "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
         "Referer": "https://www.topcv.vn/",
     }
-
+# create init function 
     def __init__(self, max_pages: int = 1, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.max_pages = max(1, int(max_pages))
