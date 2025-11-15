@@ -5,12 +5,12 @@ def main():
    #dinh nghia muc tieu can crawl
     base_url = "https://vnexpress.net"
     
-    target_url = "https://vnexpress.net/the-gioi"
+    target_url = "https://vnexpress.net/thoi-su"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
 
-    LIMIT = 100
+    LIMIT = 40
     print(f"Đang gửi request đến {base_url}...")
     
 
