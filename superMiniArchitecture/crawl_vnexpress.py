@@ -4,10 +4,10 @@ import pandas as pd
 import time
 
 def main():
-    # BƯỚC 1: ĐỊNH NGHĨA MỤC TIÊU
+   #dinh nghia muc tieu can crawl
     base_url = "https://vnexpress.net"
     
-    # "Best Practice": Luôn giả lập User-Agent.
+   
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
@@ -15,13 +15,13 @@ def main():
     print(f"Đang gửi request đến {base_url}...")
     
     try:
-        # BƯỚC 2: GỬI REQUEST
+        # buoc 2: gui request
         response = requests.get(base_url, headers=headers, timeout=10)
         response.raise_for_status() # Báo lỗi nếu request thất bại
 
         print("Request thành công! Đang bóc tách HTML...")
 
-        # BƯỚC 3: BÓC TÁCH (PARSE)
+        # BƯỚC 3: BÓC TÁCH 
         soup = BeautifulSoup(response.text, 'html.parser')
         
         # **Đây là selector chính**: Tìm tất cả các thẻ <article> có class 'item-news'
