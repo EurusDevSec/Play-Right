@@ -7,7 +7,10 @@ st.title("Crawl du lieu VnExpress")
 df = pd.read_csv('vnexpress_data.csv')
 st.subheader(f"hien thi {len(df)} bai viet da crawl: ")
 for index, row in df.iterrows():
+
+
     with st.container(border=True):
-        st.image(row['HinhAnh'])
+        if pd.notna(row['HinhAnh']) and row['HinhAnh'] != "":
+            st.image(row['HinhAnh'])
         st.subheader(row['TieuDe'])
         st.write(f"[Doc bai viet]({row['DuongDan']})")
