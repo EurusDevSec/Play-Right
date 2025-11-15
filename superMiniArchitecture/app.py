@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", theme="light")
 st.title("Crawl du lieu VnExpress")
 
 df = pd.read_csv('vnexpress_data.csv')
