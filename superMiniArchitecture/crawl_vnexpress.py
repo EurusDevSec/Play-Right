@@ -37,6 +37,7 @@ def main():
         
         title_element = article.find('h3', class_='title-news')
         
+        image_element = article.find('img')
         if title_element:
            
             link_element = title_element.find('a')
@@ -52,9 +53,11 @@ def main():
                     if not link.startswith('http'):
                         link = base_url + link
                         
+                    image_url =image_element.get('src') if image_element else ""
                     data_crawled.append({
                         'TieuDe': title.strip(),
-                        'DuongDan': link
+                        'DuongDan': link,
+                        'HinhAnh': image_url
                     })
 
     if not data_crawled:
