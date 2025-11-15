@@ -96,7 +96,7 @@ st.markdown() và st.write() được dùng để hiển thị tiêu đề và �
 
 4. Kết quả
 
-Sản phẩm cuối cùng là một ứng dụng web tương tác, hoàn thành trong thời gian ngắn, đáp ứng 100% yêu cầu đề bài. Ứng dụng hiển thị rõ ràng, sạch sẽ, và chuyên nghiệp các dữ liệu đã thu thập được từ VnExpress.
+Sản phẩm cuối cùng là một ứng dụng web tương tác, hoàn thành, đáp ứng 100% yêu cầu đề bài. Ứng dụng hiển thị rõ ràng, sạch sẽ, và chuyên nghiệp các dữ liệu đã thu thập được từ VnExpress.
 
 ![alt text](image.png)
 
@@ -123,6 +123,4 @@ Load (Lưu trữ/Hiển thị): Lưu dữ liệu vào SQLite hoặc PostgreSQL (
 
 6. Kết luận
 
-Qua đề tài [QT1], nhóm đã hoàn thành xuất sắc yêu cầu thu thập dữ liệu bằng cách xây dựng một pipeline đơn giản nhưng hiệu quả. Nhóm không chỉ crawl thành công dữ liệu từ VnExpress mà còn xây dựng được một ứng dụng Web App (Streamlit) để trực quan hóa kết quả.
-
-Quan trọng nhất, nhóm đã chứng minh được sự hiểu biết về các hạn chế của phương pháp đơn giản và trình bày được tầm nhìn, kiến trúc cho một hệ thống E-T-L hoàn chỉnh, sẵn sàng cho các đề tài phức tạp hơn trong tương lai.
+Qua đề tài [QT1], nhóm đã hoàn thành yêu cầu thu thập dữ liệu bằng cách xây dựng một pipeline đơn giản nhưng hiệu quả.
