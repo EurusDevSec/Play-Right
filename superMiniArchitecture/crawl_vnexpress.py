@@ -15,7 +15,7 @@ def main():
 
     # buoc 2: gui request
     response = requests.get(target_url, headers=headers, timeout=10)
-    response.raise_for_status() # Báo lỗi nếu request thất bại
+    response.raise_for_status() #bao bat ky loi nao xay ra nhu 404, 503, bad request tranh crash
 
     print("Request thành công! Đang bóc tách HTML...")
 
