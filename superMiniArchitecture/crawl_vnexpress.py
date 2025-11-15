@@ -10,6 +10,7 @@ def main():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
 
+    LIMIT = 10
     print(f"Đang gửi request đến {base_url}...")
     
 
@@ -26,10 +27,14 @@ def main():
     print(articles)
     data_crawled = []
 
-    print(f"Tìm thấy {len(articles)} bài viết. Đang bóc tách...")
+    print(f"Tìm thấy {len(articles)} bài viết. Đang bóc tách {LIMIT} bai viet...")
 
     for article in articles:
      
+        if len(data_crawled) >= LIMIT:
+            print(f"Da dat gioi han {LIMIT} BAI VIET. Dung crawl")
+            break
+        
         title_element = article.find('h3', class_='title-news')
         
         if title_element:
