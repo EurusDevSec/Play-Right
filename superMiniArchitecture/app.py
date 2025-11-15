@@ -16,7 +16,7 @@ for index, row in df.iterrows():
 # tao card cho tung bai
         with st.container(border=True): 
             if pd.notna(row['HinhAnh']) and row['HinhAnh'] != "":
-                st.image(row['HinhAnh'], use_column_width=True) 
+                st.image(row['HinhAnh'], use_container_width=True) 
             
           
             st.markdown(f"**{row['TieuDe']}**") 
