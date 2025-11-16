@@ -10,7 +10,7 @@ N_COLS=3
 cols = st.columns(N_COLS)
 
 for index, row in df.iterrows():
-
+# duyet qua tung dong 
     col_index = index % N_COLS
     with cols[col_index]:
 # tao card cho tung bai
