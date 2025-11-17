@@ -31,7 +31,7 @@ def main():
     
     # in ra so luong bai viet co LIMIT lam gioi han
     print(f"Tìm thấy {len(articles)} bài viết. Đang bóc tách {LIMIT} bai viet...")
-  
+    # duyet qua tung article trong danh sach articles lay duoc 
     for article in articles:
      
         if len(data_crawled) >= LIMIT:
