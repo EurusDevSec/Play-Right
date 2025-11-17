@@ -28,9 +28,10 @@ def main():
     articles = soup.find_all('article', class_='item-news')
     print(articles)
     data_crawled = []
-
+    
+    # in ra so luong bai viet co LIMIT lam gioi han
     print(f"Tìm thấy {len(articles)} bài viết. Đang bóc tách {LIMIT} bai viet...")
-
+  
     for article in articles:
      
         if len(data_crawled) >= LIMIT:
