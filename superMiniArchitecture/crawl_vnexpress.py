@@ -33,7 +33,7 @@ def main():
     print(f"Tìm thấy {len(articles)} bài viết. Đang bóc tách {LIMIT} bai viet...")
     # duyet qua tung article trong danh sach articles lay duoc 
     for article in articles:
-     
+        # kiem tra gioi han neu vuot qua limit thi break
         if len(data_crawled) >= LIMIT:
             print(f"Da dat gioi han {LIMIT} BAI VIET. Dung crawl")
             break
