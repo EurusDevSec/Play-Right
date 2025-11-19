@@ -62,7 +62,7 @@ def main():
                         'DuongDan': link,
                         'HinhAnh': image_url
                     })
-
+    # neu khong co bai nao thi in loi va return 
     if not data_crawled:
         print("Lỗi: Không tìm thấy bài viết nào. Selector có thể đã thay đổi.")
         return
