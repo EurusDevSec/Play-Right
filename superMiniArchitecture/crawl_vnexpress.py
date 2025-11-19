@@ -39,7 +39,7 @@ def main():
             break
         # su dung phuong thuc find tim the h3 dua tren class title-news
         title_element = article.find('h3', class_='title-news')
-        
+        # tim the img de lay anh
         image_element = article.find('img')
         if title_element:
            
