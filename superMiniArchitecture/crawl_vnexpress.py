@@ -37,7 +37,7 @@ def main():
         if len(data_crawled) >= LIMIT:
             print(f"Da dat gioi han {LIMIT} BAI VIET. Dung crawl")
             break
-        
+        # su dung phuong thuc find tim the h3 dua tren class title-news
         title_element = article.find('h3', class_='title-news')
         
         image_element = article.find('img')
