@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+import pandas as pd # import cac thu vien streamlit, pandas
 
 st.set_page_config(layout="wide")
 st.title("Crawl du lieu VnExpress")
@@ -8,7 +8,7 @@ df = pd.read_csv('vnexpress_data.csv')
 st.subheader(f"hien thi {len(df)} bai viet da crawl: ")
 N_COLS=3
 cols = st.columns(N_COLS)
-
+# duyet qua tung dong va cot
 for index, row in df.iterrows():
 # duyet qua tung dong 
     col_index = index % N_COLS
