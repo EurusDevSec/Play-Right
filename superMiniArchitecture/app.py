@@ -4,7 +4,7 @@ import pandas as pd # import cac thu vien streamlit, pandas
 st.set_page_config(layout="wide")
 st.title("Crawl du lieu VnExpress")
 
-df = pd.read_csv('vnexpress_data.csv')
+df = pd.read_csv('vnexpress_advanced.csv')
 st.subheader(f"hien thi {len(df)} bai viet da crawl: ")
 N_COLS=3
 cols = st.columns(N_COLS)
