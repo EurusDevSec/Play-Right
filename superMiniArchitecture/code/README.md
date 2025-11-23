@@ -16,8 +16,6 @@ Crawl (Thu thập): Lấy dữ liệu tin tức (Tiêu đề, Đường link, H�
 
 Save (Lưu trữ): Lưu trữ dữ liệu đã được làm sạch vào một file có cấu trúc (.csv).
 
-Visualize (Trực quan hóa): Xây dựng một ứng dụng web (Web App) đơn giản, nhanh chóng để trình bày kết quả một cách trực quan, dễ hiểu.
-
 2. Phương pháp và Công cụ sử dụng
 
 Để đảm bảo dự án được hoàn thành đúng thời hạn và có sản phẩm chạy được 100%, nhóm đã áp dụng phương pháp "Bắt đầu đơn giản" (Start Simple) hay "Sản phẩm Khả thi Tối thiểu" (MVP). Nhóm tập trung vào các trang web tĩnh và sử dụng một bộ công cụ (tech stack) linh hoạt, hiệu quả, hoàn toàn bằng Python.
@@ -34,11 +32,9 @@ Bóc tách HTML (Parsing): Thư viện BeautifulSoup4 để lọc và tìm kiế
 
 Xử lý và Lưu trữ Dữ liệu: Thư viện pandas để tổ chức dữ liệu vào DataFrame và xuất ra file CSV.
 
-Trực quan hóa (Web App): Thư viện Streamlit để nhanh chóng xây dựng một giao diện web tương tác mà không cần viết HTML/CSS.
-
 3. Kiến trúc và Thực thi
 
-Quy trình của nhóm được chia thành 2 phần rõ rệt: Script Thu thập (Backend) và Ứng dụng Hiển thị (Frontend).
+Quy trình của nhóm: Script Thu thập (Backend)
 
 3.1. Script Thu thập (crawl_vnexpress.py)
 
@@ -69,36 +65,6 @@ Tiêu đề: Lấy từ thuộc tính title của thẻ <a>.
 Hình ảnh: Lấy từ thuộc tính src của thẻ <img> đầu tiên.
 
 Lưu trữ: Dữ liệu sạch (Tiêu đề, Đường link, Hình ảnh) được append vào một list, sau đó dùng pandas.DataFrame() để tạo bảng và lưu ra file vnexpress_with_images.csv với encoding='utf-8-sig' để đảm bảo tiếng Việt hiển thị chính xác trên Excel.
-
-3.2. Ứng dụng Hiển thị (app.py)
-
-Đây là file chịu trách nhiệm hiển thị kết quả cho người xem.
-
-Cấu hình trang: Dùng st.set_page_config(layout="wide", theme="light") để bắt buộc ứng dụng chạy ở chế độ nền sáng và chiếm toàn bộ chiều rộng trình duyệt.
-
-Tải dữ liệu: Dùng pd.read_csv('vnexpress_with_images.csv') để đọc file CSV đã được crawl. (Có kèm try...except để báo lỗi nếu file CSV không tồn tại).
-
-Tạo Giao diện Lưới (Grid Layout):
-
-Để tạo giao diện card hiện đại, nhóm đã khởi tạo 3 cột: cols = st.columns(3).
-
-Sử dụng toán tử modulo (index % 3) để "chia" các bài báo lần lượt vào các cột (0, 1, 2, 0, 1, 2,...).
-
-Điều này giúp các card tự động xếp hàng ngang và xuống dòng khi hết 3 cột.
-
-Hiển thị Card:
-
-Trong mỗi cột, st.container(border=True) được dùng để tạo một khung viền (card).
-
-st.image(row['HinhAnh'], use_container_width=True) được dùng để hiển thị ảnh (với tham số use_container_width để ảnh tự co giãn vừa vặn với cột).
-
-st.markdown() và st.write() được dùng để hiển thị tiêu đề và đường link.
-
-4. Kết quả
-
-Sản phẩm cuối cùng là một ứng dụng web tương tác, hoàn thành, đáp ứng 100% yêu cầu đề bài. Ứng dụng hiển thị rõ ràng, sạch sẽ, và chuyên nghiệp các dữ liệu đã thu thập được từ VnExpress.
-
-![alt text](image.png)
 
 5. Hạn chế và Hướng phát triển
 

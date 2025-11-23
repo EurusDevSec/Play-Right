@@ -1,0 +1,1 @@
+print(f"😣 Loi khi crawl {url}: {e}")

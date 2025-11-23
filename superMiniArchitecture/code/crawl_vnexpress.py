@@ -8,16 +8,16 @@ def main():
     
     # du dung target url voi cac link tuy chon 
     target_url = [
-        "https://vnexpress.net/thoi-su",
-        "https://vnexpress.net/kinh-doanh",
-        "https://vnexpress.net/the-gioi"
+        "https://vnexpress.net/phap-luat",
+        "https://vnexpress.net/giai-tri",
+        "https://vnexpress.net/suc-khoe"
     ]
     # su dung user-agent gia lap trinh duyet de tranh bi server chan bot 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
 
-    LIMIT = 40
+    LIMIT = 20
     data_crawled = []
     print(f"Đang gửi request đến {base_url}...")
     for url in target_url:
@@ -51,7 +51,7 @@ def main():
                 # tim the img de lay anh
                 image_element = article.find('img')
 
-                # --- NEW FEATURES ---
+                
                 # Lay Mo ta ngan (Sapo)
                 sapo_tag = article.find('p', class_='description')
                 sapo = sapo_tag.find('a').get_text(strip=True) if sapo_tag and sapo_tag.find('a') else ""
@@ -79,7 +79,7 @@ def main():
                             if not link.startswith('http'):
                                 link = base_url + link
                                 
-                            # image_url =image_element.get('src') if image_element else ""
+                            
                             # VnExpress hay dùng data-src cho lazy load
                             image_url = image_element.get('data-src') if image_element and image_element.get('data-src') else (image_element.get('src') if image_element else "")
 
