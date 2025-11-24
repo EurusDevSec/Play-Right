@@ -13,8 +13,7 @@ Group: 16
 
 ### Cài đặt uv
 
-1. **Cài đặt uv (nếu chưa có):** `pip install uv` hoặc tải từ [uv releases](https://github.com/astral-sh/uv/releases) cho binary trực tiếp.
-2. **Cập nhật uv (nếu cần):** `uv self update`
+1. **Cài đặt uv (nếu chưa có):** `pip install uv`
 
 ### Khởi tạo và quản lý dự án
 
@@ -25,7 +24,7 @@ Group: 16
 
 ### Chạy ứng dụng
 
-5. **Chạy ứng dụng:** `uv run python main.py` (tự động sử dụng venv nếu có).
+5. **Chạy ứng dụng:** `uv run python main.py`.
 
 ### Lưu ý Best Practices
 
