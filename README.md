@@ -9,13 +9,30 @@ Group: 16
 > [!IMPORTANT]
 > 3 - Nguyen Ngoc Hoa
 
-- Workflow - use uv
+- Workflow - use uv (Best Practices)
 
-1. uv venv: create venv
-2. create **requirements.in** , add list needed package: pandas, playwright, spa-cy, fastapi, plotly
-3. compile: **uv pip compile requirements.in -o requirements.txt**
-4. sync: **uv pip sync requirement.txt**: Dowload or remove Packages
-5. run: **uv run python main.py**
+### Cài đặt uv
+
+1. **Cài đặt uv (nếu chưa có):** `pip install uv` hoặc tải từ [uv releases](https://github.com/astral-sh/uv/releases) cho binary trực tiếp.
+2. **Cập nhật uv (nếu cần):** `uv self update`
+
+### Khởi tạo và quản lý dự án
+
+3. **Khởi tạo dự án (nếu mới):** `uv init` (tạo `pyproject.toml` và cấu trúc cơ bản).
+4. **Thêm dependencies:** Sử dụng `uv add` để thêm gói một cách an toàn và tự động cập nhật `pyproject.toml`:
+   - `uv add pandas playwright spaCy fastapi plotly`
+   - Quản lý phiên bản và dependencies tự động, tốt hơn cách cũ.
+
+### Chạy ứng dụng
+
+5. **Chạy ứng dụng:** `uv run python main.py` (tự động sử dụng venv nếu có).
+
+### Lưu ý Best Practices
+
+- Sử dụng `pyproject.toml` cho quản lý dependencies hiện đại.
+- Luôn commit `pyproject.toml` và `uv.lock` (nếu có) để đảm bảo reproducibility.
+- Kiểm tra phiên bản: `uv --version`.
+- Nếu cần venv riêng: `uv venv` và kích hoạt với `source .venv/bin/activate` (trên Windows: `.venv\Scripts\activate`).
 
 This is test Background
 ![myBackground](assets/imgs/testGif.gif)
